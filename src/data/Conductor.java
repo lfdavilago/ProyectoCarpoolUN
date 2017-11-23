@@ -20,6 +20,7 @@ public class Conductor extends Usuario{
     private Image Licencia;
     private double Precio;
     private ArrayList<Universidad> Disponibilidad;
+    private RutaConductor ruta;
     private Viaje viaje; 
 // Constructor;
 
