@@ -15,19 +15,18 @@ import java.io.IOException;
  */
 public class Pasajero extends Usuario{
 // Atributos
-    private double contribucion;
+    
     private Viaje viaje;
+    private String Tipo = "P";
 // Constructor
-
-    public Pasajero(double contribucion, String Nombre, int Documento, Account account, Image Foto, Universidad universidad, String direccion) throws IOException {
-        super(Nombre, Documento, account, Foto, universidad, direccion);
-        this.contribucion = contribucion;
+    
+    public Pasajero(String Nombre, int Documento, Universidad universidad, String direccion) throws IOException {
+        super(Nombre, Documento, universidad, direccion);
         this.viaje = null;
-        
     }
   
 // Metodos
-
+    
     @Override
     public void SolicitarViaje(String Categoria) {
 

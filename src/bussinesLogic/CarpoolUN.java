@@ -6,8 +6,11 @@
 package bussinesLogic;
 
 import data.Account;
+import data.Universidad;
 import data.Usuario;
 import java.util.ArrayList;
+import ui.Inicio;
+import ui.Registro;
 
 /**
  *
@@ -16,12 +19,22 @@ import java.util.ArrayList;
 public class CarpoolUN {
    private ArrayList<Usuario> Usuarios;
    private ArrayList<Account> Accounts;
-   
+   private ArrayList<Universidad> Universidades;
    // no lo termino porque supongo que esto lo hace el sevidor tocara preguntar al profesor
    
+   public static void main(String[] arg){
+   
+   Inicio g = new Inicio();
+   g.mainh();
+   
+   
+   }
    public static void RegistrarUsuario(){
    
    
    
+   }
+   public void addUsuario(Usuario u){
+   this.Usuarios.add(u);
    }
 }

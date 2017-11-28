@@ -18,20 +18,37 @@ public class Conductor extends Usuario{
 // Atributos
     private String Placa;
     private Image Licencia;
-    private double Precio;
-    private ArrayList<Universidad> Disponibilidad;
     private RutaConductor ruta;
     private Viaje viaje; 
+    private String Tipo = "C";
 // Constructor;
 
-    public Conductor(String Placa, Image Licencia, double Precio, String Nombre, int Documento, Account account, Image Foto, Universidad universidad,  String direccion) throws IOException {
-        super(Nombre, Documento, account, Foto, universidad, direccion);
-        this.Placa = Placa;
-        this.Licencia = Licencia;
-        this.Precio = Precio;
-        this.Disponibilidad = new ArrayList<>();
+    public Conductor(String Nombre, int Documento, Universidad universidad,  String direccion) throws IOException {
+        super(Nombre, Documento, universidad, direccion);
+     
         this.viaje = null;
     }
+
+    public String getPlaca() {
+        return Placa;
+    }
+
+    public Image getLicencia() {
+        return Licencia;
+    }
+
+    public RutaConductor getRuta() {
+        return ruta;
+    }
+
+    public Viaje getViaje() {
+        return viaje;
+    }
+
+    public String getTipo() {
+        return Tipo;
+    }
+
     
 // Metodos
     @Override
@@ -56,6 +73,13 @@ public class Conductor extends Usuario{
     this.viaje = new ViajeU(this, horaSalida, cantidad);
     }
     
+    /**
+     *
+     * @return 
+     */
+    public String getClass1(){
+    return "C";
+    }
     public boolean ConsolidarViaje(){ // Se consolida un viaje cuando exista un pasajero almenos
      if(this.viaje.cuposLlenos > 0){
     this.viaje.setEstado(true);
@@ -65,6 +89,8 @@ public class Conductor extends Usuario{
      return false;  // Se debe mostrar en pantalla que aun no hay pasajeros realxciondos al viaje.
      }
     }
-  
+    public void setRutaConductor(RutaConductor t){
+    this.ruta = t;
+    }
  
 }

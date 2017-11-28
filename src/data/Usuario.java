@@ -18,8 +18,6 @@ public abstract class  Usuario {
 // Atributos
     protected String Nombre;
     private int Documento;
-    private Account account;
-    private Image Foto;
     protected Universidad universidad;
     private Direccion direccion;
     protected ArrayList<Viaje> Historial;
@@ -27,11 +25,10 @@ public abstract class  Usuario {
     
 // Construcctor
 
-    public Usuario(String Nombre, int Documento, Account account, Image Foto, Universidad universidad, String direccion) throws IOException {
+    public Usuario(String Nombre, int Documento, Universidad universidad, String direccion) throws IOException {
         this.Nombre = Nombre;
         this.Documento = Documento;
-        this.account = account;
-        this.Foto = Foto;
+
         this.universidad = universidad;
         this.direccion = new Direccion(direccion, this);
         this.Historial = new ArrayList<>();
@@ -53,13 +50,7 @@ public abstract class  Usuario {
         return Documento;
     }
 
-    public Account getAccount() {
-        return account;
-    }
 
-    public Image getFoto() {
-        return Foto;
-    }
 
     public Universidad getUniversidad() {
         return universidad;

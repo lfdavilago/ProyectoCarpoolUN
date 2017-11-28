@@ -11,23 +11,37 @@ import java.util.Date;
  *
  * @author acer
  */
-public class RutaConductor {
-    private String origen;
-    private String Destino;
+public class RutaConductor extends Ruta {
+ 
     private String Ruta;
-    private boolean Desvio;
-    private int puestosLibres;
     private float precio;
-    private Date horaSalida;
 
-    public RutaConductor(String origen, String Destino, String Ruta, boolean Desvio, int puestosLibres, float precio, Date horaSalida) {
-        this.origen = origen;
-        this.Destino = Destino;
-        this.Ruta = Ruta;
-        this.Desvio = Desvio;
-        this.puestosLibres = puestosLibres;
-        this.precio = precio;
-        this.horaSalida = horaSalida;
+    public RutaConductor() {
+      
+        this.Ruta = null;
+     
     }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+  
+    public String getRuta() {
+        return Ruta;
+    }
+
+    public void setRuta(String Ruta) {
+        this.Ruta = Ruta;
+    }
+
+  
+    
+    
+    
     
             }
