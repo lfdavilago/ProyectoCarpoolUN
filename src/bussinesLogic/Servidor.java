@@ -7,6 +7,8 @@ package bussinesLogic;
 
 import data.Ruta;
 import data.RutaConductor;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +16,8 @@ import java.util.ArrayList;
  * @author acer
  */
 public class Servidor {
-    
-    
+    private Socket server ;
+    private ServerSocket cliente;
     
     
     public ArrayList<RutaConductor> buscarViaje(Ruta d, ArrayList<RutaConductor> f){

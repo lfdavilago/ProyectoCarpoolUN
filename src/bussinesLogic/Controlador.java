@@ -32,6 +32,7 @@ public class Controlador {
     }
 
     public void setCconductor(Conductor c) {
+        this.u = c;
         this.c = c;
     }
 
